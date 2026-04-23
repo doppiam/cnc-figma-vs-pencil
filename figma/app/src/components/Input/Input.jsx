@@ -36,7 +36,7 @@ export default function Input({
         value: value ?? defaultValue,
         status,
       }),
-    [state, disabled, focused, value, defaultValue, status],
+    [state, disabled, focused, value, defaultValue, status]
   )
 
   const showHelper = computedState === 'error' || computedState === 'success'
@@ -80,12 +80,10 @@ export default function Input({
       {showHelper && (
         <div className="cc-input__helperRow">
           <div className="cc-input__helper">
-            {helperText ||
-              (computedState === 'success' ? 'Success text' : 'Error text')}
+            {helperText || (computedState === 'success' ? 'Success text' : 'Error text')}
           </div>
         </div>
       )}
     </div>
   )
 }
-

@@ -1,11 +1,6 @@
 import './Button.css'
 
-export default function Button({
-  variant = 'primary',
-  children,
-  className,
-  ...props
-}) {
+export default function Button({ variant = 'primary', children, className, ...props }) {
   return (
     <button
       className={[
@@ -22,4 +17,3 @@ export default function Button({
     </button>
   )
 }
-

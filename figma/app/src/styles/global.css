@@ -12,7 +12,8 @@
   --color-utility-green: #2aa76b;
 
   /* Typography (from Figma: Typography page) */
-  --font-family-sans: "Google Sans Flex", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-family-sans:
+    "Google Sans Flex", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   --font-weight-regular: 400;
   --font-weight-semibold: 600;
 
@@ -37,4 +38,3 @@ body {
   background: var(--color-neutral-white);
   font-family: var(--font-family-sans);
 }
-

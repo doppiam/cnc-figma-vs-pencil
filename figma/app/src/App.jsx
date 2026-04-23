@@ -1,8 +1,27 @@
+import { useEffect, useState } from 'react'
 import './App.scss'
 import Button from './components/Button/Button.jsx'
 import Input from './components/Input/Input.jsx'
+import SubscribePage from './pages/SubscribePage/SubscribePage.jsx'
 
 function App() {
+  const [route, setRoute] = useState(() =>
+    typeof window !== 'undefined' ? window.location.hash : ''
+  )
+
+  useEffect(() => {
+    function onHashChange() {
+      setRoute(window.location.hash)
+    }
+
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
+
+  if (route === '#/subscribe') {
+    return <SubscribePage />
+  }
+
   return (
     <main className="app">
       <div style={{ display: 'grid', gap: 24 }}>
@@ -32,6 +51,20 @@ function App() {
             <div style={{ fontSize: 'var(--font-size-t4)', color: 'var(--color-neutral-grey)' }}>
               Hover states show on mouse-over.
             </div>
+          </div>
+        </section>
+
+        <section style={{ display: 'grid', gap: 12 }}>
+          <h2 style={{ margin: 0, fontSize: 'var(--font-size-t1)' }}>Pages</h2>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <Button
+              variant="secondary"
+              onClick={() => {
+                window.location.hash = '#/subscribe'
+              }}
+            >
+              Open “Modale subscribe”
+            </Button>
           </div>
         </section>
       </div>
