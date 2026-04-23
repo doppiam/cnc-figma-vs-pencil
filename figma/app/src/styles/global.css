@@ -1,0 +1,40 @@
+:root {
+  /* Colors (from Figma: Colors page) */
+  --color-neutral-black: #333333;
+  --color-neutral-grey: #666666;
+  --color-neutral-light-grey: #c7c7c7;
+  --color-neutral-white: #ffffff;
+
+  --color-brand-purple: #ce1dae;
+  --color-brand-dark-purple: #a6178c;
+
+  --color-utility-red: #da5456;
+  --color-utility-green: #2aa76b;
+
+  /* Typography (from Figma: Typography page) */
+  --font-family-sans: "Google Sans Flex", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+
+  --font-size-h1: 20px;
+  --font-size-t1: 18px;
+  --font-size-t2: 16px;
+  --font-size-t3: 14px;
+  --font-size-t4: 12px;
+
+  --line-height-100: 1;
+
+  /* Spacing / radius (observed on Button/Input components) */
+  --radius-sm: 4px;
+  --space-2: 8px;
+  --space-4: 16px;
+  --space-6: 24px;
+  --space-button-py: 17px;
+}
+
+body {
+  color: var(--color-neutral-black);
+  background: var(--color-neutral-white);
+  font-family: var(--font-family-sans);
+}
+
