@@ -1,0 +1,77 @@
+.ds-input {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-8);
+  width: 343px; /* matches Pen frames */
+  font-family: var(--ds-font-sans);
+}
+
+.ds-input__label {
+  padding-left: var(--ds-space-16);
+  font-size: var(--ds-font-size-14);
+  font-weight: var(--ds-font-weight-semibold);
+  color: var(--ds-color-black);
+}
+
+.ds-input__field {
+  display: flex;
+  align-items: center;
+  padding: var(--ds-input-padding);
+  border-radius: var(--ds-radius-4);
+  border: 1px solid var(--ds-color-light-grey);
+  background: var(--ds-color-white);
+}
+
+.ds-input__control {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  font-size: var(--ds-font-size-16);
+  font-weight: var(--ds-font-weight-regular);
+  color: var(--ds-color-grey);
+}
+
+.ds-input:focus-within .ds-input__field {
+  border-color: var(--ds-color-grey); /* State=Focus */
+}
+
+.ds-input:focus-within .ds-input__control {
+  color: var(--ds-color-black); /* State=Focus */
+}
+
+/* Filled */
+.ds-input--filled .ds-input__control {
+  color: var(--ds-color-black);
+}
+
+/* Disabled */
+.ds-input--disabled .ds-input__label {
+  color: var(--ds-color-light-grey);
+}
+
+.ds-input--disabled .ds-input__field {
+  border-color: var(--ds-color-light-grey);
+}
+
+.ds-input--disabled .ds-input__control {
+  color: var(--ds-color-light-grey);
+}
+
+/* Error / Success messages */
+.ds-input__message {
+  padding-left: var(--ds-space-16);
+  font-size: var(--ds-font-size-12);
+  font-weight: var(--ds-font-weight-regular);
+}
+
+.ds-input__message--error {
+  color: var(--ds-color-red);
+}
+
+.ds-input__message--success {
+  color: var(--ds-color-green);
+}
+

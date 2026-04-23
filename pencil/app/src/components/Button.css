@@ -1,0 +1,52 @@
+.ds-button {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: var(--ds-radius-4);
+  padding: var(--ds-button-padding-y) var(--ds-button-padding-x);
+  font-family: var(--ds-font-sans);
+  font-size: var(--ds-font-size-14);
+  font-weight: var(--ds-font-weight-semibold);
+  line-height: 1;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.ds-button:disabled {
+  cursor: not-allowed;
+}
+
+/* Primary */
+.ds-button--primary {
+  background: var(--ds-color-purple);
+  color: var(--ds-color-white);
+}
+
+.ds-button--primary:hover:not(:disabled) {
+  background: var(--ds-color-dark-purple);
+}
+
+.ds-button--primary:disabled {
+  background: var(--ds-color-light-grey);
+  color: var(--ds-color-white);
+}
+
+/* Secondary */
+.ds-button--secondary {
+  background: transparent;
+  border-color: var(--ds-color-purple);
+  color: var(--ds-color-purple);
+}
+
+.ds-button--secondary:hover:not(:disabled) {
+  border-color: var(--ds-color-dark-purple);
+  color: var(--ds-color-dark-purple);
+}
+
+.ds-button--secondary:disabled {
+  border-color: var(--ds-color-light-grey);
+  color: var(--ds-color-light-grey);
+}
+
